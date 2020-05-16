@@ -1,0 +1,19 @@
+{
+  "name": "Dark Mode Everywhere",
+  "version": "1.0",
+  "description": "This is an extension that is meant to help your eyes out, by making the web less white. You can turn it on or off, and make <div> elements clear or colored darkly.",
+  "permissions": ["activeTab", "tabs","declarativeContent","storage","<all_urls>"],
+  "background": {
+     "scripts": ["background.js"],
+     "persistent": false
+   },
+   "content_scripts":[{
+     "matches": ["<all_urls>"],
+      "run_at": "document_idle",
+      "js": ["contentscript.js"]
+     }],
+   "page_action": {
+      "default_popup": "ui.html"
+  },
+  "manifest_version": 2
+}

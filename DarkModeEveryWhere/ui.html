@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      button {
+        height: 100px;
+        width: 150px;
+        outline: none;
+        border: none;
+        margin: none;
+        color: white;
+        border-radius: 12px;
+        position: fixed;
+        background-color:rgb(40, 41, 45);
+        display: block;
+        }
+      .MainContentDiv {
+        height: 300px;
+        width: 324px;
+        outline: none;
+        border: none;
+        margin: none;
+        color: grey;
+      }
+      .hidden{
+        visibility: hidden;
+      }
+      .COD:hover .hidden{visibility: visible;;}
+
+    </style>
+  </head>
+  <body style="background-color: #35363A;">
+      <div id="mainPage" class=MainContentDiv>
+        <button id="changeColor" style="margin:2px;"></button>
+        <div class="COD">
+          <button id="ClearOrDark" style="margin:2px; top:50%;"></button>
+          <span class="hidden" style="position: fixed; z-index: +1; top: 75%; left:1%; text-align: left; margin: 1px; font-size: 15px;background-color:rgb(30, 34, 38); ">Toggles Element Opactiy,<br> May Help With Nasty Looking Websites</span>
+        </div>
+        <button id="PerWebSitePref" style="margin:2px; left: 50%;"></button>
+        <button id="More" style="margin:2px; left: 50%; top: 50%;">More</button>
+        <div id="reload" style="font-size: 35px; color: white; margin: 4px; text-align: center; visibility: hidden; position: fixed; bottom: 2%; right: 17%">Please Reload</div>
+        <div style="position: fixed; top: 25%; left:13%; margin: 3px;">For All Websites</div>
+        <div style="position: fixed; top: 25%; right:13%; margin: 3px;">For This Website</div>
+      </div>
+      <div id="secondPage" class="MainContentDiv" style="visibility: hidden; z-index: -1; position: absolute; top: 8px;">
+        <button id="Back" style="margin:2px;">Back</button>
+        <button id="A" style="margin:2px; top:50%;">a</button>
+        <button id="B" style="margin:2px; left: 50%;">b</button>
+        <button id="C" style="margin:2px; left: 50%; top: 50%;">c</button>
+      </div>
+
+      <script src=popup.js> </script>
+
+  </body>
+</html>
